@@ -24,9 +24,6 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap'])
                 redirectTo: '/'
             });
     }])
-.config(function($hhtpProvaider) {
-$httpProvider.defaults.headers.post = { 'Access-Control-Allow-Origin':'*' }
-})
     .run(function($rootScope) {
         var web3 = new Web3();
         var eth_node_url = 'http://nostack.info:8545'; // TODO: remote URL
